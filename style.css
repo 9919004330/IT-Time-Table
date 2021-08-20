@@ -12,7 +12,7 @@ table {
   height: 300px;
   top: 2px;
   transform: rotate(-15deg);
-  left: 500px;
+  left: 650px;
 }
 .babu {
   position: absolute;
@@ -80,7 +80,7 @@ p {
   color: rgba(0, 0, 0, 0.712);
 }
 .p {
-  margin-top: 100px;
+  margin-top: 90px;
 }
 
 @media (max-width: 800px) {
@@ -99,7 +99,7 @@ p {
     position: absolute;
     height: 300px;
     top: -30px;
-    left: -30px;
+    left: 100px;
   }
   .hone {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
