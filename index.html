@@ -20,6 +20,15 @@
     <h1 class="hone">INFORMATION TECHNOLOGY</h1>
     <h1 class="htwo">TIME TABLE</h1>
     <div class="main">
+        <div class="music">
+            <img class="play" id="icon" src="./play.png" alt="">
+        </div>
+
+        
+        <audio loop id="mySong">
+            <source src="./CBN.mp3" type="audio/mp3">
+        </audio>
+        
 
         <table class="table">
     
@@ -102,6 +111,19 @@
     </div>
     <p class="p">COPYRIGHTS@1947</p>
     <p class="p1">CREATED BY ME 🤪</p>
+    <script>
+        var mySong=document.getElementById("mySong");
+        var icon=document.getElementById("icon");
+        icon.onclick=function(){
+            if(mySong.paused){
+                mySong.play();
+                icon.src="./pause.png";
+            }else{
+                mySong.pause();
+                icon.src="./play.png";
+            }
+        }
+    </script>
 
 </body>
 
