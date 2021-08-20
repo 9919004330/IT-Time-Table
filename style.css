@@ -1,7 +1,12 @@
 .main {
   overflow-x: auto;
 }
-
+.play {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  height: 70px;
+}
 table {
   margin-top: 10px;
   margin-left: 95px;
@@ -135,5 +140,12 @@ p {
 
   .table td:hover {
     background: none;
+  }
+  .play {
+    position: absolute;
+    z-index: 2;
+    top: 82px;
+    left: 22px;
+    height: 50px;
   }
 }
