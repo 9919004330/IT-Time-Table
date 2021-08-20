@@ -1,151 +1,130 @@
-.main {
-  overflow-x: auto;
-}
-.play {
-  position: absolute;
-  top: 22px;
-  left: 22px;
-  height: 70px;
-}
-table {
-  margin-top: 10px;
-  margin-left: 95px;
-}
-.flag {
-  z-index: -2;
-  position: absolute;
-  height: 300px;
-  top: 2px;
-  transform: rotate(-15deg);
-  left: 650px;
-}
-.babu {
-  position: absolute;
-  height: 200px;
-  top: 36px;
-  left: 110px;
-}
-.ntr {
-  position: absolute;
-  height: 200px;
-  top: 36px;
-  right: 110px;
-}
-.hone {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: rgba(0, 0, 0, 0.815);
-  margin-top: 170px;
-  z-index: 1;
-  text-align: center;
-}
-.htwo {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: rgba(0, 0, 0, 0.815);
-  text-align: center;
-  margin-top: px;
-  margin-left: 10px;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-.table {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  text-align: center;
-  color: rgba(0, 0, 0, 0.712);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-.table th {
-  border: 0.5px solid rgba(221, 221, 221, 0.384);
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+    <link rel="stylesheet" href="style.css">
 
-  padding: 17px;
-  color: white;
-  background-color: #04aa6d;
-}
-tr a {
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.685);
-}
-.table td {
-  border: 1px solid rgba(221, 221, 221, 0.699);
+</head>
 
-  padding: 12px;
-}
-.table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-.table td:hover {
-  background-color: #ddd;
-}
-p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  text-align: center;
-  color: rgba(0, 0, 0, 0.712);
-}
-.p {
-  margin-top: 50px;
-}
+<body>
 
-@media (max-width: 800px) {
-  .table th {
-    color: white;
-    background-color: #04aa6d;
-  }
-  .babu {
-    display: none;
-  }
-  .ntr {
-    display: none;
-  }
-  .flag {
-    z-index: -2;
-    position: absolute;
-    height: 300px;
-    top: -30px;
-    left: 100px;
-  }
-  .hone {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    color: rgba(0, 0, 0, 0.877);
-    margin-top: 150px;
-    z-index: 1;
-    font-size: x-large;
-    text-align: center;
-  }
-  .htwo {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    color: rgba(0, 0, 0, 0.887);
-    text-align: center;
-    z-index: 1;
-    font-size: x-large;
-    margin-left: 50px;
-  }
-  table {
-    margin-top: -1px;
-    margin-left: 5px;
-  }
-  p {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.712);
-  }
-  .p {
-    margin-top: 100px;
-  }
+    <img class="babu" src="./CBN.png" alt="">
+    <img class="ntr" src="./NTR.png" alt="">
+    <img class="flag" src="./vid.gif" alt="">
+    
+    
+    <h1 class="hone">INFORMATION TECHNOLOGY</h1>
+    <h1 class="htwo">TIME TABLE</h1>
+    <div class="main">
+        <div class="music">
+            <img class="play" id="icon" src="./play.png" alt="">
+        </div>
 
-  .table td:hover {
-    background: none;
-  }
-  .play {
-    position: absolute;
-    z-index: 2;
-    top: 82px;
-    left: 22px;
-    height: 50px;
-  }
-}
+        
+        <audio loop id="mySong">
+            <source src="./CBN.mp3" type="audio/mp3">
+        </audio>
+        
+
+        <table class="table">
+    
+            <tr>
+                <th></th>
+                <th>09:00AM-09:50AM</th>
+                <th>09:55AM-10:45AM</th>
+                <th>10:55AM-11:45AM</th>
+                <th>11:50AM-12:40PM</th>
+                <th>01:30PM-02:20PM</th>
+                <th>02:20PM-03:10PM</th>
+                <th>03:20PM-04:10PM</th>
+            </tr>
+            <tr>
+                <td> MONDAY</td>
+                <td><a href=""> INT18R453</a></td>
+                <td><a href="https://meet.google.com/lookup/cyxnk27dy5?authuser=2&hs=179" target="_blank"> CSE18R371</a>
+                </td>
+                <td></td>
+                <td><a href="hhttps://meet.google.com/lookup/cvljaaeseh" target="_blank">INT18R272</a></td>
+                <td><a href="https://meet.google.com/lookup/cyxnk27dy5?authuser=2&hs=179" target="_blank"> CSE18R371</a>
+                </td>
+                <td><a href="https://meet.google.com/lookup/cyxnk27dy5?authuser=2&hs=179" target="_blank"> CSE18R371</a>
+                </td>
+                <td></td>
+    
+            </tr>
+            <tr>
+                <td> TUESDAY </td>
+                <td><a href="https://meet.google.com/lookup/hbsomzqtso">INT18R452</a></td>
+                <td></td>
+                <td><a href="http://meet.google.com/jxa-vsxc-int">MEC18R449</a></td>
+                <td><a href="http://meet.google.com/jxa-vsxc-int">MEC18R449</a></td>
+                <td></td>
+                <td><a href=""> INT18R453</a></td>
+                <td></td>
+    
+            </tr>
+            <tr>
+                <td>WEDNESDAY</td>
+                <td><a href="hhttps://meet.google.com/lookup/cvljaaeseh" target="_blank">INT18R272</a></td>
+                <td><a href="https://meet.google.com/lookup/hbsomzqtso">INT18R452</a></td>
+                <td><a href="https://meet.google.com/lookup/cyxnk27dy5?authuser=2&hs=179" target="_blank"> CSE18R371</a>
+                </td>
+                <td></td>
+                <td></td>
+                <td><a href=""> INT18R453</a></td>
+                <td></td>
+    
+            </tr>
+            <tr>
+                <td>THURSDAY</td>
+                <td><a href="https://meet.google.com/lookup/hbsomzqtso">INT18R452</a></td>
+                <td><a href="https://meet.google.com/lookup/cyxnk27dy5?authuser=2&hs=179" target="_blank"> CSE18R371</a>
+                </td>
+                <td><a href="http://meet.google.com/jxa-vsxc-int">MEC18R449</a></td>
+                <td><a href="http://meet.google.com/jxa-vsxc-int">MEC18R449</a></td>
+                <td></td>
+                <td><a href="https://meet.google.com/lookup/cyxnk27dy5?authuser=2&hs=179" target="_blank"> CSE18R371</a>
+                </td>
+                <td></td>
+    
+            </tr>
+            <tr>
+                <td>FRIDAY</td>
+                <td><a href="">INT18R453</a></td>
+                <td><a href="https://meet.google.com/lookup/hbsomzqtso">INT18R452</a></td>
+                <td><a href="hhttps://meet.google.com/lookup/cvljaaeseh" target="_blank">INT18R272</a></td>
+                <td></td>
+                <td></td>
+                <td><a href="hhttps://meet.google.com/lookup/cvljaaeseh" target="_blank">INT18R272</a></td>
+                <td><a href="hhttps://meet.google.com/lookup/cvljaaeseh" target="_blank">INT18R272</a></td>
+    
+            </tr>
+    
+    
+    
+    
+        </table>
+    </div>
+    <p class="p">COPYRIGHTS@1947</p>
+    <p class="p1">CREATED BY ME 🤪</p>
+    <script>
+        var mySong=document.getElementById("mySong");
+        var icon=document.getElementById("icon");
+        icon.onclick=function(){
+            if(mySong.paused){
+                mySong.play();
+                icon.src="./pause.png";
+            }else{
+                mySong.pause();
+                icon.src="./play.png";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
