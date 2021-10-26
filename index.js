@@ -46,7 +46,6 @@ setInterval(function main(){
     }
     if(day==1 && hr>=11 ){
         pclass.textContent='INT18R453'
-        pclass.onclick=()=>window.open(data.C453)
     }
     if(day==1 && hr>=01 ){
         pclass.textContent='CSE18R371'
@@ -67,7 +66,6 @@ setInterval(function main(){
     }
     if(day==2 && hr>=01 &&  noon=='PM' ){
         pclass.textContent='INT18R453'
-        pclass.onclick=()=>window.open(data.C453)
     }
 
 
@@ -91,12 +89,8 @@ setInterval(function main(){
     }
     if(day==3 && hr>=01){
         pclass.textContent='INT18R453'
-        pclass.onclick=()=>window.open(data.C371)
     }
-    if(day==3 && hr>=01){
-        pclass.textContent='INT18R453'
-        pclass.onclick=()=>window.open(data.C371)
-    }
+
     if(day==3 && hr>=03){
         pclass.textContent='INT18R453'
         pclass.onclick=()=>window.open(data.C371)
@@ -134,7 +128,6 @@ setInterval(function main(){
 
     if(day==5 && hr>=08){
         pclass.textContent='INT18R453'
-        pclass.onclick=()=>window.open(data.C453)
     }
 
     if(day==5 && hr>=10){
