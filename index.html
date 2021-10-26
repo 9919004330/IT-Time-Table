@@ -1,126 +1,158 @@
-<!DOCTYPE html>
-<html lang="en">
+var mySong=document.getElementById("mySong");
+var icon=document.getElementById("icon");
+var pclass=document.querySelector('.p_class')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time Table</title>
-    <link rel="stylesheet" href="style.css">
 
-</head>
+icon.onclick=function(){
+    if(mySong.paused){
+        mySong.play();
+        icon.src="./pause.png";
+    }else{
+        mySong.pause();
+        icon.src="./play.png";
+    }
+}
 
-<body>
+setInterval(function main(){
+    var clock=document.querySelector('.clock')
+    var time=new Date();
+    var day=time.getDay();
+    var hr=time.getHours();
+    var min=time.getMinutes();
+    var sec=time.getSeconds();
 
-    <img class="babu" src="./CBN.png" alt="">
-    <img class="ntr" src="./NTR.png" alt="">
-    <img class="flag" src="./vid.gif" alt="">
-    
-    
-    <h1 class="hone">INFORMATION TECHNOLOGY</h1>
-    <h1 class="htwo">TIME TABLE</h1>
-    <div class="main">
-        <div class="music">
-            <img class="play" id="icon" src="./play.png" alt="">
-        </div>
+    var noon='AM'
+    if (hr>12){
+        noon='PM'
+        hr=hr-12
+    }
+    if(hr==0){
+        hr=12;
+    }
+    if(hr<10){
+        hr='0'+hr
+    }
+    if(min<10){
+        min='0'+min
+    }
+    if(sec<10){
+        sec='0'+sec
+    }
 
-        
-        <audio loop id="mySong">
-            <source src="./CBN.mp3" type="audio/mp3">
-        </audio>
-        
+    // day mon
+    if(day==1 && hr>=08 && noon=='AM' ){
+        pclass.textContent='CSE18R371'
+        pclass.onclick=()=>window.open(data.C371)
+    }
+    if(day==1 && hr>=11 ){
+        pclass.textContent='INT18R453'
+        pclass.onclick=()=>window.open(data.C453)
+    }
+    if(day==1 && hr>=01 ){
+        pclass.textContent='CSE18R371'
+        pclass.onclick=()=>window.open(data.C371)
+    }        
 
-        <table class="table">
-    
-            <tr>
-                <th></th>
-                <th>09:00AM-09:50AM</th>
-                <th>09:55AM-10:45AM</th>
-                <th>10:55AM-11:45AM</th>
-                <th>11:50AM-12:40PM</th>
-                <th>01:30PM-02:20PM</th>
-                <th>02:20PM-03:10PM</th>
-                <th>03:20PM-04:10PM</th>
-            </tr>
-            <tr>
-                <td> MONDAY</td>
-                <td><a href="https://meet.google.com/lookup/cyxnk27dy5?authuser=2&hs=179" target="_blank"> CSE18R371</a></td>
-                <td><a href="https://meet.google.com/lookup/cyxnk27dy5?authuser=2&hs=179" target="_blank"> CSE18R371</a>
-                </td>
-                <td></td>
-                <td><a href="">INT18R453</a></td>
-                <td><a href="https://meet.google.com/lookup/cyxnk27dy5?authuser=2&hs=179" target="_blank"> CSE18R371</a>
-                </td>
-                <td></td>
-                <td></td>
-    
-            </tr>
-            <tr>
-                <td> TUESDAY </td>
-                <td><a href="https://meet.google.com/lookup/hbsomzqtso" target="_blank">INT18R452</a></td>
-                <td></td>
-                <td><a href="http://meet.google.com/jxa-vsxc-int" target="_blank">MEC18R449</a></td>
-                <td><a href="http://meet.google.com/jxa-vsxc-int" target="_blank">MEC18R449</a></td>
-                <td></td>
-                <td><a href=""> INT18R453</a></td>
-                <td></td>
-    
-            </tr>
-            <tr>
-                <td>WEDNESDAY</td>
-                <td><a href="https://meet.google.com/lookup/cyxnk27dy5?authuser=2&hs=179" target="_blank"> CSE18R371</a></td>
-                <td><a href="https://meet.google.com/lookup/hbsomzqtso" target="_blank">INT18R452</a></td>
-                <td></td>
-                <td><a href="https://meet.google.com/lookup/cyxnk27dy5?authuser=2&hs=179" target="_blank"> CSE18R371</a></td>
-                <td></td>
-                <td><a href=""> INT18R453</a></td>
-                <td><a href="https://meet.google.com/lookup/cvljaaeseh" target="_blank">INT18R272</a></td>
-    
-            </tr>
-            <tr>
-                <td>THURSDAY</td>
-                <td><a href="https://meet.google.com/lookup/hbsomzqtso" target="_blank">INT18R452</a></td>
-                <td><a href="https://meet.google.com/lookup/cvljaaeseh" target="_blank">INT18R272</a></td>
-                <td><a href="http://meet.google.com/jxa-vsxc-int" target="_blank">MEC18R449</a></td>
-                <td><a href="http://meet.google.com/jxa-vsxc-int" target="_blank">MEC18R449</a></td>
-                <td><a href="https://meet.google.com/lookup/cvljaaeseh" target="_blank">INT18R272</a></td>
-                <td><a href="https://meet.google.com/lookup/cvljaaeseh" target="_blank">INT18R272</a></td>
-                <td></td>
-    
-            </tr>
-            <tr>
-                <td>FRIDAY</td>
-                <td><a href="">INT18R453</a></td>
-                <td></td>
-                <td></td>
-                <td><a href="https://meet.google.com/lookup/cvljaaeseh" target="_blank">INT18R272</a></td>
-                <td><a href="https://meet.google.com/lookup/cyxnk27dy5?authuser=2&hs=179" target="_blank"> CSE18R371</a></td>
-                <td></td>
-                <td><a href="https://meet.google.com/oyq-nupk-zvp" target="_blank">INT18R452</a></td>
-    
-            </tr>
-    
-    
-    
-    
-        </table>
-    </div>
-    <p class="p">COPYRIGHTS@1947</p>
-    <p class="p1">CREATED BY ME 🤪</p>
-    <script>
-        var mySong=document.getElementById("mySong");
-        var icon=document.getElementById("icon");
-        icon.onclick=function(){
-            if(mySong.paused){
-                mySong.play();
-                icon.src="./pause.png";
-            }else{
-                mySong.pause();
-                icon.src="./play.png";
-            }
-        }
-    </script>
 
-</body>
 
-</html>
+    // day tue
+
+    if(day==2 && hr>=08 && noon=='AM' ){
+        pclass.textContent='INT18R452'
+        pclass.onclick=()=>window.open(data.C452)
+    }
+    if(day==2 && hr>=10 ){
+        pclass.textContent='MEC18R449'
+        pclass.onclick=()=>window.open(data.C449)
+    }
+    if(day==2 && hr>=01 &&  noon=='PM' ){
+        pclass.textContent='INT18R453'
+        pclass.onclick=()=>window.open(data.C453)
+    }
+
+
+    // day wed
+
+    if(day==3 && hr>=08 && noon=='AM' ){
+        pclass.textContent='CSE18R371'
+        pclass.onclick=()=>window.open(data.C371)
+    }
+    if(day==3 && hr>=09 && min>50 ){
+        pclass.textContent='INT18R452'
+        pclass.onclick=()=>window.open(data.C452)
+    }
+    if(day==3 && hr>=10 ){
+        pclass.textContent='INT18R452'
+        pclass.onclick=()=>window.open(data.C452)
+    }
+    if(day==3 && hr>=11){
+        pclass.textContent='CSE18R371'
+        pclass.onclick=()=>window.open(data.C371)
+    }
+    if(day==3 && hr>=01){
+        pclass.textContent='INT18R453'
+        pclass.onclick=()=>window.open(data.C371)
+    }
+    if(day==3 && hr>=01){
+        pclass.textContent='INT18R453'
+        pclass.onclick=()=>window.open(data.C371)
+    }
+    if(day==3 && hr>=03){
+        pclass.textContent='INT18R453'
+        pclass.onclick=()=>window.open(data.C371)
+    }
+
+    // day thu
+
+    if(day==4 && hr>=08 && noon=='AM' ){
+        pclass.textContent='INT18R452'
+        pclass.onclick=()=>window.open(data.C452)
+    }
+    
+    if(day==4 && hr>=09 && min>50 ){
+        pclass.textContent='INT18R272'
+        pclass.onclick=()=>window.open(data.C272)
+    }
+    if(day==4 && hr>=10){
+        pclass.textContent='INT18R272'
+        pclass.onclick=()=>window.open(data.C272)
+    }
+    if(day==4 && hr>=10 && min>45){
+        pclass.textContent='MEC18R449'
+        pclass.onclick=()=>window.open(data.C449)
+    }
+    if(day==4 && hr>=11){
+        pclass.textContent='MEC18R449'
+        pclass.onclick=()=>window.open(data.C449)
+    }
+    if(day==4 && hr>=01){
+        pclass.textContent='INT18R272'
+        pclass.onclick=()=>window.open(data.C272)
+    }
+
+    // day fri
+
+    if(day==5 && hr>=08){
+        pclass.textContent='INT18R453'
+        pclass.onclick=()=>window.open(data.C453)
+    }
+
+    if(day==5 && hr>=10){
+        pclass.textContent='INT18R272'
+        pclass.onclick=()=>window.open(data.C272)
+    }
+
+    if(day==5 && hr>=01 ){
+        pclass.textContent='CSE18R371'
+        pclass.onclick=()=>window.open(data.C371)
+    }
+    if(day==5 && hr>=02 ){
+        pclass.textContent='INT18R452'
+        pclass.onclick=()=>window.open(data.C452)
+    }
+
+
+
+
+    clock.textContent=hr+ ':'+min+':'+sec+ ' '+noon
+})
