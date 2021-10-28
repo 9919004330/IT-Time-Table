@@ -107,6 +107,53 @@ tr a {
   color: rgba(0, 0, 0, 0.685);
   cursor: pointer;
 }
+.v_container{
+  position: relative;
+}
+.v{
+  position: absolute;
+  width: 80px;
+  cursor: pointer;
+  left: -1%;
+  top: 58%;
+}
+.rv{
+  position: absolute;
+  width: 40px;
+  right: 0;
+  top: 40%;
+  right: 5%;
+  cursor: pointer;
+}
+.s_selection{
+  position: absolute;
+  height: 200px;
+  width: 300px;
+  left: 0%;
+  top: 50%;
+  background-color:rgba(128, 128, 128, 0.469) ;
+  clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
+  display:none;
+  animation: leftsli 2s;
+
+}
+@keyframes leftsli{
+  0%{
+    left: -20%;
+  }
+  100%{
+    left: 0%;
+  }
+}
+.s_selection audio{
+  text-align: center;
+  margin-left: 20px;
+  width: 200px;
+  height: 38px;
+  margin-top: 5px;
+}
+
+
 
 @media (max-width: 800px) {
   .table th {
@@ -154,8 +201,8 @@ tr a {
     text-align: center;
     color: rgba(0, 0, 0, 0.712);
   }
-  .p {
-    margin-top: 100px;
+  .table td {
+     padding: 15px;
   }
 
   .table td:hover {
@@ -196,5 +243,11 @@ tr a {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgba(0, 0, 0, 0.685);
     cursor: pointer;
+  }
+  .v{
+    display: none;
+  }
+  .s_selection{
+    display: none;
   }
 }
