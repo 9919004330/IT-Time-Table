@@ -1,6 +1,21 @@
 var mySong=document.getElementById("mySong");
 var icon=document.getElementById("icon");
 var pclass=document.querySelector('.p_class')
+var v=document.querySelector('.v');
+var rv=document.querySelector('.rv');
+var s_selection=document.querySelector('.s_selection');
+
+
+v.onclick=function(){
+    s_selection.style.display='inherit';
+    v.style.display='none';
+    mySong.pause();
+    icon.src="./play.png";
+}
+rv.onclick=function(){
+    s_selection.style.display='none';
+    v.style.display='inherit';
+}
 
 
 icon.onclick=function(){
@@ -47,7 +62,7 @@ setInterval(function main(){
     if(day==1 && hr>=11 ){
         pclass.textContent='INT18R453'
     }
-    if(day==1 && hr>=01 && noon=='PM'){
+    if(day==1 && hr>=01 ){
         pclass.textContent='CSE18R371'
         pclass.onclick=()=>window.open(data.C371)
     }        
@@ -71,7 +86,7 @@ setInterval(function main(){
 
     // day wed
 
-    if(day==3 && hr>=08 && noon=='AM' ){
+    if(day==3 && hr>=08 && noon=='AM'){
         pclass.textContent='CSE18R371'
         pclass.onclick=()=>window.open(data.C371)
     }
@@ -90,10 +105,9 @@ setInterval(function main(){
     if(day==3 && hr>=01 && noon=='PM'){
         pclass.textContent='INT18R453'
     }
-
     if(day==3 && hr>=03 && noon=='PM'){
-        pclass.textContent='INT18R272'
-        pclass.onclick=()=>window.open(data.C272)
+        pclass.textContent='INT18R453'
+        pclass.onclick=()=>window.open(data.C371)
     }
 
     // day thu
@@ -119,7 +133,7 @@ setInterval(function main(){
         pclass.textContent='MEC18R449'
         pclass.onclick=()=>window.open(data.C449)
     }
-    if(day==4 && hr>=01 && noon=='PM'){
+    if(day==4 && hr>=01){
         pclass.textContent='INT18R272'
         pclass.onclick=()=>window.open(data.C272)
     }
@@ -128,6 +142,7 @@ setInterval(function main(){
 
     if(day==5 && hr>=08){
         pclass.textContent='INT18R453'
+
     }
 
     if(day==5 && hr>=10){
@@ -135,11 +150,11 @@ setInterval(function main(){
         pclass.onclick=()=>window.open(data.C272)
     }
 
-    if(day==5 && hr>=01 && noon=='PM'){
+    if(day==5 && hr>=01 ){
         pclass.textContent='CSE18R371'
         pclass.onclick=()=>window.open(data.C371)
     }
-    if(day==5 && hr>=02 && noon=='PM'){
+    if(day==5 && hr>=02 ){
         pclass.textContent='INT18R452'
         pclass.onclick=()=>window.open(data.C452)
     }
