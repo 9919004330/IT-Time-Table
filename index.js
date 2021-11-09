@@ -4,6 +4,100 @@ var pclass=document.querySelector('.p_class')
 var v=document.querySelector('.v');
 var rv=document.querySelector('.rv');
 var s_selection=document.querySelector('.s_selection');
+var song1=document.querySelector('.song1');
+var song2=document.querySelector('.song2');
+var song3=document.querySelector('.song3');
+var song4=document.querySelector('.song4');
+var allSongs=document.querySelectorAll('.song');
+var sp1= document.querySelector('.sp1');
+var sp2= document.querySelector('.sp2');
+var sp3= document.querySelector('.sp3');
+var sp4= document.querySelector('.sp4');
+var allSp= document.querySelectorAll('.sp');
+
+function pausing() {
+    for (i=0;i<4;i++){
+        allSongs[i].pause();
+    }
+}
+
+function cuttinganimi() {
+    for (i=0;i<4;i++){
+        allSp[i].classList.remove('sstyle');
+    }
+}
+
+var songIs=false;
+
+var singerone=true;
+
+sp1.addEventListener('click',function(){
+    if(singerone){
+        pausing();
+        song1.play();
+        cuttinganimi()
+        sp1.classList.add('sstyle')
+        singerone=false;
+    }
+    else{
+        song1.pause();
+        song1.currentTime = 0;
+        singerone=true;
+        sp1.classList.remove('sstyle')
+    }
+})
+
+var singertwo=true;
+sp2.addEventListener('click',function(){
+    if(singertwo){
+        pausing();
+        song2.play();
+        cuttinganimi();
+        sp2.classList.add('sstyle');
+        singertwo=false
+    }
+    else{
+        song2.pause();
+        song2.currentTime = 0;
+        singertwo=true;
+        sp2.classList.remove('sstyle')
+    }
+})
+
+var singerthree=true;
+sp3.addEventListener('click',function(){
+    if(singerthree){
+        pausing();
+        song3.play();
+        cuttinganimi()
+        sp3.classList.add('sstyle')
+        singerthree=false
+    }
+    else{
+        song3.pause();
+        song3.currentTime = 0;
+        singerthree=true;
+        sp3.classList.remove('sstyle')
+    }
+})
+
+var singerfour=true;
+sp4.addEventListener('click',function(){
+    if(singerfour){
+        pausing();
+        song4.play();
+        cuttinganimi()
+        sp4.classList.add('sstyle')
+        singerfour=false
+    }
+    else{
+        song4.pause();
+        song4.currentTime = 0;
+        singerfour=true;
+        sp4.classList.remove('sstyle')
+    }
+})
+
 
 
 v.onclick=function(){
@@ -16,7 +110,6 @@ rv.onclick=function(){
     s_selection.style.display='none';
     v.style.display='inherit';
 }
-
 
 icon.onclick=function(){
     if(mySong.paused){
